@@ -56,7 +56,7 @@ class RangeValidator {
       this.from = from;
       this.to = to;
       this.validVal = (val) => {
-        if (typeof val !== "number") throw new Error("Must be a number");
+        if (typeof val !== "number" || val < 0) throw new Error("Must be a number > 0");
       };
     }
     set setFrom(val) {
