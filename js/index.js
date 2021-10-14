@@ -1,22 +1,23 @@
 //  функции стрелки, рекурсия №1
-function recursione(num) {
+function recursioneBrackets(num) {
   if (num < 1) {
     return "()";
   }
-  num = recursione(num - 1, right = "", left = "");
+  num = recursioneBrackets(num - 1, right = "", left = "");
   right += ")";
   left += "(";
 
   return left + right;
 }
-console.log(recursione(5));
+console.log(recursioneBrackets(5));
+
 
 let arrs = [1, 2, 3, 4, 5, 6, 7];
 let max = Math.max(...arrs);
 let min = Math.min(...arrs);
 console.log(max, min);
 
-const arrowFunc = (...arg) => arg.reduce((acc, el) => acc + el, 0);
+const arrowFuncSum = (...arg) => arg.reduce((acc, el) => acc + el, 0);
 
 function recursionePow(num, exp) {
   if (exp === 0) {
@@ -78,7 +79,7 @@ class RangeValidator {
       if (val >= this.from && val <= this.to) {
         return val;
       } else {
-        throw new TypeError("Your number is out of range, try agane");
+        throw new TypeError("Your number is out of range, try againe");
       }
     }
   }
