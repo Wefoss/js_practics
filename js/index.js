@@ -39,7 +39,7 @@ function wrapper(str) {
 
 let str = "Зима близко Джон Сноу";
 const getVowels = (str) => {
-  let vowels = wrapper("аеуио");
+  let vowels = wrapper('ауоыиэяюёе');
   let result = wrapper(str).reduce((acc, el) => {
     vowels.includes(el) ? acc++ : 0;
     return acc;
