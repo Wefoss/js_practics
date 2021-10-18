@@ -16,9 +16,9 @@ let max = Math.max(...arrs);
 let min = Math.min(...arrs);
 console.log(max, min);
 
-const arrowFuncSum = (...arg) => arg.reduce((acc, el) => acc * el, 1);
+const arrowFuncСomposition = (...arg) => arg.reduce((acc, el) => acc * el, 1);
 
-console.log(arrowFuncSum(1, 2, 3, 4, 5));
+console.log(arrowFuncСomposition(1, 2, 3, 4, 5));
 
 function recursionePow(num, exp) {
   if (exp === 0) {
