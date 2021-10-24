@@ -103,7 +103,7 @@ class ListLinks {
   }
 }
 
-const list = new ListLinks();
+const list = new ListLinks(40, {}, 2, "hello", []);
 console.log(...list);
 
 
@@ -142,16 +142,6 @@ class Queue {
         mainQueue.push(lineTho[i]);
       }
     }
-    // let diff = tailOne._tail > tailTho._tail ? tailOne._tail - tailTho._tail : tailTho._tail - tailOne._tail;
-    // let averageLength = (tailOne._tail + tailTho._tail - diff) / 2;
-    // let biggestTail = tailOne._tail > tailTho._tail ? tailOne : tailTho
-    // for (let i = 0; i < averageLength; i++) {
-    //   q3.push(tailOne[i]);
-    //   q3.push(tailTho[i]);
-    // }
-    // for (let i = averageLength; i < averageLength + diff; i++) {
-    //   q3.push(biggestTail[i]);
-    // }
     return mainQueue;
   };
 }
