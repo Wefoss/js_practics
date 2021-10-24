@@ -78,10 +78,12 @@ class ListLinks {
   }
 
   pop() {
+    if(!this.tail && !this.head) {
+      return 
+    }
       if (this.length === 0) {
       return (this.head.value = null);
     }
-
     let deletedVal = this.tail;
     let currentVal = this.head;
     while (currentVal.next) {
@@ -101,7 +103,7 @@ class ListLinks {
   }
 }
 
-const list = new ListLinks(40, {}, 2, "hello", []);
+const list = new ListLinks();
 console.log(...list);
 
 
