@@ -1,0 +1,52 @@
+button {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.4);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: hsl(240, 62%, 62%);
+  color: #fff;
+  transition: all ease 0.2s;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+button:hover {
+    color: lightgreen;
+    background-color: hsl(240, 62%, 65%, 0.8);
+}
+
+.main-slider {
+  width: 55vw;
+  margin: 100px auto;
+  gap: 10px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.main-slider > button:first-child,
+.main-slider > button:first-child ~ button {
+  flex: 0 20%;
+}
+.main-slider > button:first-child ~ button {
+  margin-left: auto;
+}
+
+.slider {
+  width: 100%;
+  order: 1;
+}
+
+.slider > img {
+  width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+ }
