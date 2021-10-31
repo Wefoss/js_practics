@@ -66,22 +66,22 @@ class Groupe {
     this._arrStudents = arrStudents;
   }
 
-  get getGroupeName() {
+  get groupeName() {
     return this._groupeName;
   }
 
-  set setGroupeName(val) {
+  set groupeName(val) {
     if(typeof val === 'string' && val.length) {
       this._groupeName = val;
     } else throw new TypeError("Write correct groupe name")
     
   }
-
-  get getArrStudents() {
+  
+  get arrStudents() {
     return this._arrStudents;
   }
 
-  set setArrStudents(val) {
+  set arrStudents(val) {
     if (
      this.checkCorrectArray(val)
     ) {
