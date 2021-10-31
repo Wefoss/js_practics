@@ -8,12 +8,12 @@ const [prev, next] = document.querySelectorAll('button')
 
 let item = document.createAttribute("src");
 
-const foo = () =>  {
+const prevNexthandler = () =>  {
   let i = arrayImages.indexOf(img.getAttribute("src")) === 0 ? 1 : 0;
   item.value = arrayImages[i];
   img.setAttributeNode(item);
 };
 
-foo()
-prev.addEventListener("click", foo);
-next.addEventListener("click", foo);
+prevNexthandler()
+prev.addEventListener("click", prevNexthandler);
+next.addEventListener("click", prevNexthandler);
