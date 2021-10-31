@@ -83,8 +83,7 @@ class Groupe {
 
   set setArrStudents(val) {
     if (
-      Object.prototype.toString.call(val) === "[object Array]" &&
-      val.join(" ").split(" ").length%2 === 0
+     this.checkCorrectArray(val)
     ) {
       this._arrStudents = val;
     } else
@@ -106,6 +105,14 @@ class Groupe {
       .slice(0, 1)
       .toUpperCase()}.`;
   }
+
+  checkCorrectArray(val) {
+    return  Object.prototype.toString.call(val) === "[object Array]" &&
+    val.join(" ").split(" ").length%2 === 0 && val.every(el => typeof el === "string")
+  }
 }
 const students = ["joHn Snow", "arya Stark"];
 const groupe = new Groupe("groupe1", students);
+
+
+
